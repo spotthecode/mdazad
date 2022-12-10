@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="src/css/style.css" /> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/css/nav-style.css" />
+
+    <title>@mdazad:Portfolio</title>
+  </head>
+  <body>
+    <!-- 1.navigation -->
+    <div class="nav fixed" >
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <!-- <div class="nav-title">spotthecode</div> -->
+      </div>
+      <div class="nav-btn">
+        <label htmlFor="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Linkedin</a>
+        <a href="#works">Works</a>
+        <a href="#contact">Contact me</a>
+      </div>
+
+      <div class="nav-logo">
+        <img
+          class="round linkedin"
+          src="public/images/linkedin.png"
+          width="30px"
+          alt="@linkedin Profile"
+        />
+        <img
+          class="github"
+          src="public/images/github.png"
+          width="30px"
+          alt="@github profile"
+        />
+      </div>
+    </div>
+
+    <!-- landingPage -->
+    <div class="landingPage">
+      <!-- 1, Hero section  -->
+      <div class="grid-4 hero-section">
+        <div class="content">
+          <p>👋, I'm</p>
+          <h1 class="heading">
+            UI Designer,<br />
+            Developer
+          </h1>
+
+          <b class="tittle">Nice to have you here, Take a look around.</b><br />
+          <a href="#aboutPage"><button>about me</button></a>
+        </div>
+
+        <div class="image">
+          <img src="public/images/BlackImage.png" alt="" />
+        </div>
+      </div>
+
+      <!-- 2. About Section  -->
+      <div class="grid-4 aboutPage" id="aboutPage">
+        <div class="content">
+          <h1 class="heading">ABOUT ME</h1>
+          <p class="tittle">
+            I'm azad, an e-learner. 21 years old UI Designer and Front-end
+            developer. Pasionate toward creating inspiring digital experience.
+            Crrently focused on to improving my skills.
+          </p>
+          <a href="#skills"><button>skills</button></a>
+        </div>
+      </div>
+
+      <!-- 3. SKILLs  -->
+      <div class="skills" id="skills">
+        <div class="content">
+          <div class="heading"><h1>MY SKILLS</h1></div>
+          <div class="row-1">
+            <h4 class="tittle">Languages + Frameworks</h4>
+            <img src="public/images/icons8-html.gif" alt="HTML" />
+            <img src="public/images/css3.svg" alt="CSS" />
+            <img src="public/images/javascript.gif" alt="JS" />
+            <img src="public/images/tailwind-css.svg" alt="Tailwind CSS" />
+            <img src="public/images/icons8-react.gif" alt="React.js" />
+          </div>
+          <div class="row-2">
+            <h4 class="tittle">Desinging and Development Tools</h4>
+            <img src="public/images/icons8-figma.gif" alt="Figma" />
+            <img src="public/images/adobe-xd.svg" alt="Adobe XD" />
+            <img src="public/images/visual-studio-code-2019.svg" alt="45px" />
+          </div>
+        </div>
+      </div>
+
+      <!--4.  Work  -->
+      <div class="work">
+        <div class="content">
+          <h1 class="heading">WORKS / PROJECTS</h1>
+
+          <div class="row">
+            <!-- work-1  -->
+            <div class="work-1">
+              <div class="img-body"></div>
+              <h3>JavaScript Counter.</h3>
+              <p class="tittle">A simple cunter by using JavaScript.</p>
+              <div class="buttons">
+                <a href="https://spotthecode.github.io/counter/" target="_blank" class="demo-btn"><button>Demo</button></a>
+                <a href="https://github.com/spotthecode/counter" target="_blank" clas="code-btn"><button>Source Code</button></a>
+              </div>
+            </div>
+
+            <!-- work-2  -->
+
+            <div class="work-2">
+              <div class="img-body"></div>
+              <h3>Tempreture Converter</h3>
+              <p class="tittle">Using HTML, CSS and JavaScript.</p>
+              <div class="buttons">
+                <a href="https://spotthecode.github.io/tempreture-converter/" class="demo-btn"><button>Demo</button></a>
+                <a href="https://github.com/spotthecode/tempreture-converter" clas="code-btn"><button>Source Code</button></a>
+              </div>
+            </div>
+
+            <!-- work-3  -->
+
+            <div class="work-3">
+              <div class="img-body"></div>
+              <h3>Quotes Generator.</h3>
+              <p class="tittle">Random quotes generator using JavaScript.</p>
+              <div class="buttons">
+                <a href="https://spotthecode.github.io/random-quotes/" class="demo-btn"><button>Demo</button></a>
+                <a href="https://github.com/spotthecode/random-quotes" clas="code-btn"><button>Source Code</button></a>
+              </div>
+            </div>
+
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center; font-size:14px; padding:10px;">Designed and Developed by <a href="https://www.instagram.com/mdazad2.0/">@mdazad</a></p>
+  </body>
+</html>

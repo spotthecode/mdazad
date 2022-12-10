@@ -1,0 +1,129 @@
+<!-- HTML:  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Counter by Azad</title>
+  </head>
+  <body>
+    <center class="counter-box">
+      <!-- screen to show output -->
+      <h1 class="heading">Counter </h1>
+      <h1 class="screen output" id="screen">0</h1>
+
+      <div class="buttons">
+        <button id="inc">+</button>
+        <button id="dec">-</button>
+        <button id="reset">reset</button>
+      </div>
+    </center>
+
+    <p>designed and developed by <a href="https://www.instagram.com/mdazad2.0/">@mdazad2.0</a></p>
+
+  </body>
+</html>
+
+<!--CSS: styling -->
+<style>
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    /* background-color: lightblue; */
+    background: linear-gradient(#d3cce3, #e9e4f0);
+  }
+  .heading{
+    margin-top: 4rem;
+  }
+  
+  h1{
+    font-family: 'poppins';
+    font-size: 3rem;
+  }
+
+  p{
+    text-align: center;
+    font-family: calibri;
+  }
+  center {
+    margin: auto;
+    height: 90vh;
+   width: 95%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .screen {
+    /* background-color: white; */
+    color: white;
+    background: linear-gradient(to bottom right, #c33764, #1d2671);
+    height: 30vh;
+    width: 90%;
+    margin-top: 10vh;
+    padding: 1rem;
+    border-radius: 20px;
+  }
+  .output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+  }
+  .buttons {
+    margin-top: 2rem;
+  }
+  .buttons > button {
+    margin:0.2em;
+    height: 3em;
+    width: 3em;
+    font-size: 24px;
+    border-radius: 50px;
+    border: 1px solid black;
+    /* padding: 1rem; */
+  }
+  button:active{
+    background-color: rgb(255, 226, 248);
+  }
+  #reset {
+    margin-left: 1em;
+    width: 5em;
+  }
+  #reset:active{
+    background-color: rgb(255, 173, 173);
+  }
+  
+  
+</style>
+
+<!-- JS: JavaScript -->
+
+<script>
+  let screen = document.getElementById("screen");
+
+  let inc = document.getElementById("inc");
+  let dec = document.getElementById("dec");
+  let reset = document.getElementById("reset");
+
+  let i = 0;
+  inc.onclick = function inc() {
+    i++;
+    screen.innerHTML = i;
+  };
+
+  dec.onclick = function dec() {
+    if (i >0) {
+      --i;
+      screen.innerHTML = i;
+    }
+  };
+
+  reset.onclick = function reset() {
+    i = 0;
+    screen.innerHTML = 0;
+  };
+</script>

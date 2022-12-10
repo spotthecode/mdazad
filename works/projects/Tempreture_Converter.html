@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Created by md_azad
+    Date:29_Oct_2022 -->
+    
+    <title>Tempreture Converter by md_azad</title>
+</head>
+<body>
+    
+    <center class="container">
+        <h1 style="font-size: 40px; font-family:'poppins'; color:blue;">temperature converter</h1> <br><br>
+        <input type="text" placeholder="celsius" id="celc"><br>
+        <input type="text" placeholder="fahrenheit" id="fahren"> 
+        
+
+        <p>designed and developed by @designer.mdazad2.0</p>
+    </center>
+</body>
+</html>
+
+<style>
+    body{
+        background-color: aliceblue;
+    }
+    input{
+        margin: 0.5rem;
+        font-size: 18px;
+
+        padding:1rem;        
+        border-radius: 15px;
+        border-style: none;
+    }
+   
+    input:hover{
+        /* background-color:lightblue; */
+        box-shadow: 5px 5px 26px #e3e5eb, -5px -5px 26px #ffffff;
+    }
+   
+</style>
+
+<script>
+    
+        // accessing the HTML elements 
+   let cel = document.getElementById("celc");
+        let fah = document.getElementById("fahren");
+
+        // tempreture converter functions
+
+        cel.addEventListener('input',function(){
+            let c = this.value;
+            let f = (c*9/5) + 32;
+            fah.value = f + "  °F";
+        });
+
+        fah.addEventListener('input', function(){
+            let f = this.value;
+            let c = (f-32)*5/9;
+            cel.value = c + " °C";
+        });
+</script>
+

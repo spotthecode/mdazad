@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" value="">
+<head>
+    <meta charset="UTF-8" value="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" value="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" value="">
+   
+    <title>Calculator</title>
+</head>
+<body>
+
+    <div class="calculator background">        
+      
+        <div class="display" id="screen"></div>
+        <div class="buttons grid-box">
+
+            <!-- 1st row -->
+            <button id="clear">AC</button>
+            <button>%</button>
+            <button>/</button>
+            <button>*</button>
+
+            <!-- 2nd row -->
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>-</button>
+
+            <!-- 3rd row -->
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+          
+
+            <!-- 4th row -->
+            <button >1</button>
+            <button >2</button>
+            <button >3</button>
+            <button class="operator" id="sum">+</button>
+
+            <!-- 5th row -->
+            <button>0</button>
+            <button>.</button>
+            <button class="operator" id="equal">=</button>
+
+        </div>
+    
+    </div>
+
+    <p>designed and developed by <a href="https://www.instagram.com/mdazad2.0/">@mdazad2.0</a></p>
+
+
+</body>
+</html>
+
+
+<style>
+    *{
+        margin:0px; 
+        padding:0px;
+        box-sizing:border-box;
+    }
+html{
+    background-image:url('win11.png');
+    background-size:cover;
+}
+    .background{
+        z-index: 2;
+        position:relative;
+        margin:auto;
+        border:1px solid white;
+        height:100vh;   width:385px;
+        border-radius: 30px;
+        padding:1rem;
+        color:white;
+        background: rgba(149, 126, 252, 0.089);
+        backdrop-filter: blur( 8px );
+-webkit-backdrop-filter: blur( 8px );
+    }
+    h2{
+        text-align:center;
+        font-family:'roboto';
+        color:#242424;
+    }
+    p{
+        color:white;
+        text-align:center;
+        font-family: calibri;
+    }
+    #screen{
+        background-color:#ffffff;
+        
+        color:#242424;
+        font-weight: bold;
+        font-size:32px;
+        
+        display:flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding:1em;
+
+        height:20%;
+        border-radius: 30px;
+    }
+    .grid-box{
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap:1em;
+        padding-top: 3em;
+        height:70%;
+    }
+    .grid-box>button{
+        font-size: 24px;
+        border-radius:30px;
+        font-weight: bold;
+    }
+    .operator{
+        color:rgb(253, 253, 255);
+        background-color:rgb(87, 228, 6);
+    }
+    #clear{
+        background-color:rgb(255, 96, 96);
+        color:gainsboro;
+    }
+    #clear:hover{
+        border:2px solid rgb(255, 1, 1);   
+    }
+    #sum{
+        grid-row: 3/5;
+        grid-column: 4/5;
+    }
+    #equal{
+        grid-column:3/5;
+        background-color:rgb(0, 74, 139);
+    }
+    button{
+        border:none;
+        background-color: #ffffff;
+    }
+    button:hover{
+        box-shadow:0px 0px 18px 4px #0000002d;
+        /* border:2px solid rgb(14, 142, 255); */
+    }
+    button:active{
+        background-color: rgb(195, 223, 248);
+    }
+    
+</style>
+
+<script>
+
+    let screen = document.getElementById('screen');
+    let btn =document.querySelectorAll('button');
+
+    for(let i=0; i<btn.length; i++){
+        btn[i].addEventListener("click", function(){
+            if(this.innerHTML=="="){
+                screen.innerHTML=eval(screen.innerHTML);
+
+            }else{
+                if(this.innerHTML=="AC"){
+                    screen.innerHTML="";
+                }
+                else{
+                    screen.innerHTML+=this.innerHTML;
+                }
+            }
+        })
+    }
+</script>

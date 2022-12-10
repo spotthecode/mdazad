@@ -1,0 +1,134 @@
+:root {
+  --textColor: rgb(117, 117, 117);
+  --pColor: #153794;
+  --sColor: #0988ff3e;
+}
+body {
+  margin: 0px;
+}
+.nav-logo{
+  position: absolute;
+  right: 5%;
+}
+.nav-logo img{
+  margin: 0px 5px;
+}
+
+.nav {
+  padding: 0px 5%;
+  margin: auto;
+  width: 100%;
+  position:sticky;
+  top:0px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* blue nav  */
+.nav {
+  background: rgba(255, 255, 255, 0.068);
+  backdrop-filter: blur(8px);
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title:active {
+  background-color: #1e88e519;
+}
+
+.nav-logo {
+  border-radius: 100%;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-family: "sf pro display";
+  
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  margin: 13px 14px 13px 14px;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  color: rgb(19, 19, 19);
+  color:#666666;
+}
+
+.nav > .nav-links > a:hover {
+  border-bottom: 2px solid #1e88e5;
+  color:#111111;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    /* background-color:#BBDEFB; */
+  }
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 3px solid #1a1a1a;
+    /* border-radius: 2px; */
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    right: 0px;
+    color: blac;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(30vh);
+    border-radius: 20px;
+    padding-top: 20px;
+
+    background-color: aliceblue;
+    /* box-shadow: 0px 16px 16px -20px rgba(0, 0, 0, 0.546); */
+
+    overflow-y: auto;
+  }
+}

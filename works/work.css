@@ -1,0 +1,21 @@
+.card-body{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 0px 18px 6px rgb(237, 237, 237);
+  }
+  #card-1{
+    background-image: url("src/generator.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  #card-2{
+    background-image: url('src/counter.png');
+  }
+  #card-3{
+    background-image: url('src/calculator.png');
+  }
+  #card-4{
+    background-image: url('src/temprature.png');
+  }
+  
