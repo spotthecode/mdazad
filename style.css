@@ -207,6 +207,9 @@ button{
         border:1px solid #666666;
         padding:1.5em 3em;
     }
+    .image img{
+    display:none;
+}
     
 .hero-section .content h1{
     font-size:64px;
